@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: medibiorag-api
+    env: docker
+    dockerContext: backend
+    dockerfilePath: Dockerfile
+    plan: standard # Recommended for ML/RAG workloads due to RAM requirements
+    region: ohio
+    envVars:
+      - key: GITHUB_TOKEN
+        sync: false # Set this in Render Dashboard
+    healthCheckPath: /health
+    disk:
+      name: storage
+      mountPath: /app/storage
+      sizeGB: 1
