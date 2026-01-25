@@ -12,10 +12,9 @@ load_dotenv()
 
 app = FastAPI(title="MediBioRAG Production API")
 
-# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # In production, replace with specific origins
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -25,7 +24,6 @@ app.add_middleware(
 async def root_redirect():
     return RedirectResponse(url="/health")
 
-# Global pipeline instance (Lazy initialized at startup or first request)
 pipeline = None
 
 class QueryRequest(BaseModel):

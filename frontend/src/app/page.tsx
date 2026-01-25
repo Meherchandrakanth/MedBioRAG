@@ -113,14 +113,8 @@ export default function Home() {
                   disabled={loading || !query}
                   className="w-full bg-brand hover:brightness-110 disabled:grayscale disabled:opacity-50 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-brand/30 transition-all flex items-center justify-center space-x-2 active:scale-[0.98]"
                 >
-                  {loading ? (
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  ) : (
-                    <>
-                      <Beaker className="w-5 h-5" />
-                      <span>Generate Answer</span>
-                    </>
-                  )}
+                  <Beaker className="w-5 h-5" />
+                  <span>Generate Answer</span>
                 </button>
               </div>
             </div>

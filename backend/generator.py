@@ -59,7 +59,7 @@ class AnswerGenerator:
             {query}
             
             Ensure the response is detailed and follows a logical medical structure.
-            STRICT REQUIREMENT: Use LaTeX ($...$ or $$...$$) for ALL mathematical, chemical formulas, and scientific units (e.g., $15-20\\text{ g}$, $H_2O$, $C_6H_{12}O_6$).
+            STRICT REQUIREMENT: Use LaTeX ($...$ or $$...$$) for ALL mathematical, chemical formulas, and scientific units (e.g., $15-20\\text{{ g}}$, $H_2O$, $C_6H_{{12}}O_6$).
             """
             system_role = "You are a specialized biomedical assistant providing structured, professional medical explanations. You always use LaTeX for technical notations."
             
